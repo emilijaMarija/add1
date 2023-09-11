@@ -49,6 +49,7 @@
 		0B6886D12AAF5FE8004DB079 /* Add 1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Add 1UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B6886D52AAF5FE8004DB079 /* Add_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Add_1UITests.swift; sourceTree = "<group>"; };
 		0B6886D72AAF5FE8004DB079 /* Add_1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Add_1UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0BF9399C2AAF6E000058FB5B /* RobotoMono-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoMono-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +100,7 @@
 		0B6886B32AAF5FE7004DB079 /* Add 1 */ = {
 			isa = PBXGroup;
 			children = (
+				0BF9399C2AAF6E000058FB5B /* RobotoMono-VariableFont_wght.ttf */,
 				0B6886B42AAF5FE7004DB079 /* AppDelegate.swift */,
 				0B6886B62AAF5FE7004DB079 /* SceneDelegate.swift */,
 				0B6886B82AAF5FE7004DB079 /* GameViewController.swift */,
