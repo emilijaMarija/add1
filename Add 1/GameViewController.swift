@@ -12,11 +12,12 @@ class GameViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel?
     @IBOutlet weak var numberLabel: UILabel?
     @IBOutlet weak var inputField: UITextField?
+    @IBOutlet weak var backgroundImage: UIImageView?
     
     var score = 0
     var timer: Timer?
     var seconds = 60
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,6 +41,14 @@ class GameViewController: UIViewController {
         timeLabel?.text = String(format: "%02d", min) + ":" + String(format: "%02d", sec)
     }
     
+    func flashBackground(name: String) {
+        let delay = 0.5
+        backgroundImage?.image = UIImage(named: name)
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+            self.backgroundImage?.image = UIImage(named: "bg")
+        }
+    }
+    
     func finishGame() {
         timer?.invalidate()
         timer = nil
@@ -55,6 +64,7 @@ class GameViewController: UIViewController {
         updateScoreLabel()
         updateNumberLabel()
         updateTimeLabel()
+        backgroundImage?.image = UIImage(named: "bg")
     }
     
     @IBAction func inputFieldDidChange() {
@@ -79,8 +89,10 @@ class GameViewController: UIViewController {
         
         if isCorrect {
             score += 1
+            flashBackground(name: "correctbg")
         } else {
             score -= 1
+            flashBackground(name: "wrongbg")
         }
         
         updateNumberLabel()
