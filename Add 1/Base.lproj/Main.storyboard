@@ -66,15 +66,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" background="input" translatesAutoresizingMaskIntoConstraints="NO" id="dNa-r2-Oh2">
-                                <rect key="frame" x="71.666666666666686" y="295" width="250" height="110"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="E3n-GN-7fA"/>
-                                    <constraint firstAttribute="height" constant="110" id="hcA-V8-FyR"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="RobotoMono-Regular" family="Roboto Mono" pointSize="70"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add 1 to each of the digits. So, 1357 becomes 2468." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qE3-O1-Nua">
                                 <rect key="frame" x="5" y="738" width="383" height="65"/>
                                 <constraints>
@@ -84,10 +75,18 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="center" horizontalHuggingPriority="256" verticalHuggingPriority="256" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" background="input" translatesAutoresizingMaskIntoConstraints="NO" id="dNa-r2-Oh2">
+                                <rect key="frame" x="68.666666666666686" y="295" width="256" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="E3n-GN-7fA"/>
+                                    <constraint firstAttribute="height" constant="110" id="hcA-V8-FyR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="RobotoMono-Regular" family="Roboto Mono" pointSize="70"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="dNa-r2-Oh2" firstAttribute="top" secondItem="IJS-nZ-0EC" secondAttribute="bottom" constant="25" id="1N4-tY-VYt"/>
                             <constraint firstItem="lVK-hu-cjN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="1rf-y8-Rbh"/>
                             <constraint firstItem="IJS-nZ-0EC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="26T-TV-EfH"/>
                             <constraint firstAttribute="trailing" secondItem="qE3-O1-Nua" secondAttribute="trailing" constant="5" id="4OV-De-VKz"/>
@@ -96,10 +95,11 @@
                             <constraint firstItem="HyD-S1-WIn" firstAttribute="centerX" secondItem="IJS-nZ-0EC" secondAttribute="centerX" id="BaV-zP-YLY"/>
                             <constraint firstItem="fD6-5M-rcd" firstAttribute="centerY" secondItem="lVK-hu-cjN" secondAttribute="centerY" id="CQA-Jg-08l"/>
                             <constraint firstItem="qE3-O1-Nua" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="HY6-py-EQD"/>
+                            <constraint firstItem="dNa-r2-Oh2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I6y-lj-b3m"/>
                             <constraint firstItem="HyD-S1-WIn" firstAttribute="centerY" secondItem="IJS-nZ-0EC" secondAttribute="centerY" id="RBK-Wj-QT4"/>
                             <constraint firstItem="cqL-1c-6sX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RKV-G9-khE"/>
                             <constraint firstAttribute="trailing" secondItem="cqL-1c-6sX" secondAttribute="trailing" id="Vej-Le-KM9"/>
-                            <constraint firstItem="dNa-r2-Oh2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aXk-a9-FhU"/>
+                            <constraint firstItem="dNa-r2-Oh2" firstAttribute="top" secondItem="IJS-nZ-0EC" secondAttribute="bottom" constant="25" id="aJ8-iZ-Q7J"/>
                             <constraint firstItem="hiP-ME-Z2p" firstAttribute="centerX" secondItem="wgY-f6-qw2" secondAttribute="centerX" id="aox-qZ-LBc"/>
                             <constraint firstItem="hiP-ME-Z2p" firstAttribute="centerY" secondItem="wgY-f6-qw2" secondAttribute="centerY" id="fMa-B9-stT"/>
                             <constraint firstItem="lVK-hu-cjN" firstAttribute="top" secondItem="aFq-sj-f0l" secondAttribute="bottom" constant="1" id="jAI-5a-hij"/>
