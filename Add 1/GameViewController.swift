@@ -8,6 +8,10 @@
 import UIKit
 
 class GameViewController: UIViewController {
+    @IBOutlet weak var scoreLabel: UILabel?
+    @IBOutlet weak var timeLabel: UILabel?
+    @IBOutlet weak var numberLabel: UILabel?
+    @IBOutlet weak var inputField: UITextField?
 
     override func viewDidLoad() {
         super.viewDidLoad()

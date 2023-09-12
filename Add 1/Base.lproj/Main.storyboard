@@ -110,6 +110,12 @@
                             <constraint firstItem="cri-w0-Ec3" firstAttribute="top" secondItem="qE3-O1-Nua" secondAttribute="bottom" constant="15" id="uVV-d7-veV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="inputField" destination="dNa-r2-Oh2" id="FJo-AP-Z3E"/>
+                        <outlet property="numberLabel" destination="HyD-S1-WIn" id="pju-b0-Oi0"/>
+                        <outlet property="scoreLabel" destination="fD6-5M-rcd" id="1SP-ID-xjW"/>
+                        <outlet property="timeLabel" destination="hiP-ME-Z2p" id="q9o-ee-gj4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
