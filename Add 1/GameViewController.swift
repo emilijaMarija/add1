@@ -17,7 +17,9 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        updateScoreLabel()
+        updateNumberLabel()
     }
     
     func updateScoreLabel() {
@@ -26,6 +28,37 @@ class GameViewController: UIViewController {
 
     func updateNumberLabel() {
         numberLabel?.text = String.randomNumber(lenght: 4)
+    }
+    
+    @IBAction func inputFieldDidChange() {
+        guard let numberText = numberLabel?.text, let inputText = inputField?.text else {
+            return
+        }
+        
+        guard inputText.count == 4 else {
+            return
+        }
+        
+        var isCorrect = true
+        for n in 0..<4 {
+            let input = inputText.integer(at: n)
+            let number = numberText.integer(at: n)
+            
+            if input != number + 1 {
+                isCorrect = false
+                break
+            }
+        }
+        
+        if isCorrect {
+            score += 1
+        } else {
+            score -= 1
+        }
+        
+        updateNumberLabel()
+        updateScoreLabel()
+        inputField?.text = ""
     }
 }
 
