@@ -13,18 +13,28 @@ class GameViewController: UIViewController {
     @IBOutlet weak var numberLabel: UILabel?
     @IBOutlet weak var inputField: UITextField?
     @IBOutlet weak var backgroundImage: UIImageView?
+    @IBOutlet weak var popUpView: UIView?
+    @IBOutlet weak var scoreTotal: UILabel?
+    @IBOutlet weak var newGameButton: UIButton?
     
     var score = 0
     var timer: Timer?
-    var gameLenght = 60
+    var gameLenght = 5
     lazy var seconds = gameLenght
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        popUpView?.isHidden = true
+        newGameButton?.addTarget(self, action: #selector(hidePopUpView), for: .touchUpInside)
+        
         updateScoreLabel()
         updateNumberLabel()
         updateTimeLabel()
+    }
+    
+    @objc func hidePopUpView() {
+        popUpView?.isHidden = true
     }
     
     func updateScoreLabel() {
@@ -54,10 +64,8 @@ class GameViewController: UIViewController {
         timer?.invalidate()
         timer = nil
         
-        let alert = UIAlertController(title: "Time's Up!", message: "You got a score of \(score) points!", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Start new game", style: .default, handler: nil))
-        
-        self.present(alert, animated: true, completion: nil)
+        popUpView?.isHidden = false
+        scoreTotal?.text = "You got a score of \(score) points!"
         
         score = 0
         seconds = gameLenght
@@ -65,7 +73,8 @@ class GameViewController: UIViewController {
         updateScoreLabel()
         updateNumberLabel()
         updateTimeLabel()
-        backgroundImage?.image = UIImage(named: "bg")
+        
+        inputField?.text = ""
     }
     
     @IBAction func inputFieldDidChange() {
