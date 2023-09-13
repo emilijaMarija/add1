@@ -16,7 +16,8 @@ class GameViewController: UIViewController {
     
     var score = 0
     var timer: Timer?
-    var seconds = 60
+    var gameLenght = 60
+    lazy var seconds = gameLenght
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +43,7 @@ class GameViewController: UIViewController {
     }
     
     func flashBackground(name: String) {
-        let delay = 0.5
+        let delay = 0.4
         backgroundImage?.image = UIImage(named: name)
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
             self.backgroundImage?.image = UIImage(named: "bg")
@@ -59,7 +60,7 @@ class GameViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
         
         score = 0
-        seconds = 60
+        seconds = gameLenght
         
         updateScoreLabel()
         updateNumberLabel()
@@ -100,10 +101,12 @@ class GameViewController: UIViewController {
         inputField?.text = ""
         
         if timer == nil {
+            self.seconds = self.gameLenght
+            
             timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
                 if self.seconds == 0 {
                     self.finishGame()
-                } else if self.seconds <= 60 {
+                } else if self.seconds <= self.gameLenght {
                     self.seconds -= 1
                     self.updateTimeLabel()
                 }
